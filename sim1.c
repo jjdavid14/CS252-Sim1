@@ -79,9 +79,9 @@ void execute_add(Sim1Data *obj)
                 obj->overflow = 1;
             } else if(MSB_A == 0 && MSB_B == 0 && MSB_Sum == 1 && !carryIn) {
                 obj->overflow = 1;
-            } else if(MSB_A == 1 && MSB_B == 0 && MSB_Sum == 1 && carryIn) {
+            } else if(MSB_A == 1 && MSB_B == 1 && MSB_Sum == 0 && carryIn) {
                 obj->overflow = 1;
-            } else if(MSB_A == 0 && MSB_B == 1 && MSB_Sum == 1 && carryIn) {
+            } else if(MSB_A == 0 && MSB_B == 0 && MSB_Sum == 0 && carryIn) {
                 obj->overflow = 1;
             } else {
                 obj->overflow = 0;

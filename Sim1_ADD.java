@@ -76,12 +76,12 @@ public class Sim1_ADD
 				overflow.set(true);
 			} else if(a[31].get() == false && b[31].get() == false && sum[31].get() == true && !carryIn) {
 				overflow.set(true);
-			} else if(a[31].get() == true && b[31].get() == false && sum[31].get() == true && carryIn) {
+			} else if(a[31].get() == true && b[31].get() == true && sum[31].get() == false && carryIn) {
 				overflow.set(true);
-			} else if(a[31].get() == false && b[31].get() == true && sum[31].get() == true && carryIn) {
+			} else if(a[31].get() == false && b[31].get() == false && sum[31].get() == false && carryIn) {
 				overflow.set(true);
 			} else {
-				overflow.set(true);
+				overflow.set(false);
 			}
 		}
 	}
