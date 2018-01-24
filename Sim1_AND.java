@@ -8,7 +8,7 @@ public class Sim1_AND
 	public void execute()
 	{
 		// TODO: fill this in!
-		this.out = a && b;
+		this.out.set(a.get() && b.get());
 	}
 
 

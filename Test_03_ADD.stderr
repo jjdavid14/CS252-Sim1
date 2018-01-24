@@ -1,0 +1,4 @@
+Exception in thread "main" java.lang.IllegalArgumentException: A RussWire was read before it had been set.
+	at RussWire.get(RussWire.java:27)
+	at Test_03_ADD.print_bits(Test_03_ADD.java:105)
+	at Test_03_ADD.main(Test_03_ADD.java:91)

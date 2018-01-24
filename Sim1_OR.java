@@ -1,6 +1,6 @@
 /* Simulates a physical OR gate.
  *
- * Author: TODO
+ * Author: Jamie David
  */
 
 public class Sim1_OR
@@ -8,6 +8,7 @@ public class Sim1_OR
 	public void execute()
 	{
 		// TODO: fill this in!
+		this.out.set(a.get() || b.get());
 	}
 
 
@@ -18,6 +19,9 @@ public class Sim1_OR
 	public Sim1_OR()
 	{
 		// TODO: fill this in!
+		a   = new RussWire();
+		b   = new RussWire();
+		out = new RussWire();
 	}
 }
 
