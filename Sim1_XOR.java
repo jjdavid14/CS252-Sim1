@@ -75,7 +75,7 @@ public class Sim1_XOR
 
 		/* the value of XOR is "this and not that, or not this and that" -
 		 * or, more formally,
-		 *      (A ~B) + (~A B)
+		 *      (A ~B) PLUS (~A B)
 		 * So our last step is to OR the result of the two AND gates
 		 * together.  Its output is the output from our XOR gate.
 		 */
