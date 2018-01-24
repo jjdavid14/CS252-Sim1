@@ -1,7 +1,7 @@
 /* Simulates a physical device that performs (signed) subtraction on
  * a 32-bit input.
  *
- * Author: TODO
+ * Author: Jamie David
  */
 
 public class Sim1_SUB
@@ -13,6 +13,20 @@ public class Sim1_SUB
 		// REMEMBER: You may call execute() on sub-objects here, and
 		//           copy values around - but you MUST NOT create
 		//           objects while inside this function.
+        
+        // Get the 2sComplement of b and store in toAdd
+        complement.in = b;
+        complement.execute();
+        toAdd = complement.out;
+        
+        // Add a and 2sComplement of b and store it to sum
+        add.a = a;
+        add.b = toAdd;
+        add.execute();
+        sum = add.sum;
+        
+        // Get the overflow from add
+        overflow = add.overflow;
 	}
 
 
@@ -32,12 +46,31 @@ public class Sim1_SUB
 	// But you should add some *MORE* variables here.
 	// --------------------
 	// TODO: fill this in
-
-
+    private Sim1_2sComplement complement;
+    private RussWire[] toAdd;
+    private Sim1_ADD add;
 
 	public Sim1_SUB()
 	{
 		// TODO: fill this in!
+        a   = new RussWire[32];
+        b   = new RussWire[32];
+        sum = new RussWire[32];
+        
+        overflow = new RussWire();
+        complement = new Sim1_2sComplement();
+        
+        toAdd = new RussWire[32];
+        add = new Sim1_ADD();
+        
+        for (int i=0; i<32; i++)
+        {
+            a  [i] = new RussWire();
+            b  [i] = new RussWire();
+            sum[i] = new RussWire();
+            
+            toAdd[i] = new RussWire();
+        }
 	}
 }
 
