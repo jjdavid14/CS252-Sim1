@@ -1,6 +1,6 @@
 /* Simulates a physical AND gate.
  *
- * Author: TODO
+ * Author: Jamie David
  */
 
 public class Sim1_AND
@@ -8,6 +8,7 @@ public class Sim1_AND
 	public void execute()
 	{
 		// TODO: fill this in!
+		this.out = a && b;
 	}
 
 
@@ -18,6 +19,9 @@ public class Sim1_AND
 	public Sim1_AND()
 	{
 		// TODO: fill this in!
+		a   = new RussWire();
+		b   = new RussWire();
+		out = new RussWire();
 	}
 }
 
